@@ -1,14 +1,7 @@
 [build]
   command = "pip3 install -r requirements.txt"
+  functions = "netlify/functions"
   publish = "."
 
 [build.environment]
   PYTHON_VERSION = "3.10.8"
-
-# Esto hace que Netlify trate tu proyecto como una función
-[functions]
-  directory = "."
-
-# Si tu bot necesita ejecutarse continuamente, usa este plugin
-[[plugins]]
-  package = "@netlify/plugin-run"
